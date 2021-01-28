@@ -577,6 +577,8 @@ static void PSCRegister(void)
         evthread_use_windows_threads();
 #elif defined(_EVENT_HAVE_PTHREADS)
         evthread_use_pthreads();
+#elif defined(EVENT__HAVE_PTHREADS)
+	evthread_use_pthreads();
 #else
         1;
 #error libevent threading not support for this target
