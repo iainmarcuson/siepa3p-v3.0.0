@@ -1,0 +1,8 @@
+autosave/*.sav
+autosave/*.sav*
+**/O.*/
+dbd/
+bin/
+lib/
+include/
+db/
