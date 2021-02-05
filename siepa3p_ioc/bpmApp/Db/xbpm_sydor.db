@@ -641,9 +641,9 @@ record(ao, "$(DEVICE_NAME)CtrlDAC:CLevel-SP") {
 	field(ESLO, ".001") 	
 	field(AOFF, "0") 		
 	field(LINR, "LINEAR")
-	field(PREC, "3")
-	field(DRVH, "10.000")
-	field(DRVL, "-10.000")
+	field(PREC, "5")
+	field(DRVH, "1000.000")
+	field(DRVL, "-1000.000")
  	field(OUT, "@aie_tx_$(DEVICE_NAME) 1 178")
    	field(FLNK, "$(DEVICE_NAME)GoRegSingleWrite")
 }
@@ -1740,7 +1740,7 @@ record(ai, "$(DEVICE_NAME)CtrlDAC:BLevel-I") {
 record(ai, "$(DEVICE_NAME)CtrlDAC:CLevel-I") {
 	field(DESC,"Chan C DAC voltage level")
 	field(DTYP, "PSC Reg")
-	field(PREC,"3")
+	field(PREC,"5")
 	field(ESLO,".001") 	
 	field(AOFF,"0") 		
 	field(LINR,"LINEAR")
@@ -1941,3 +1941,76 @@ record(bi, "$(DEVICE_NAME)Lvds:In_2") {
    	field(INP , "@Rx$(DEVICE_NAME) 30 360")
 	field(SCAN,"I/O Intr")
 }
+
+#record(fanout, "$(DEVICE_NAME)ASKick1") {
+#	       field(LNK1, "$(DEVICE_NAME)Bias:BiasSource-SP")
+#	       field(LNK2, "$(DEVICE_NAME)Channel:BiasSource-SP")
+#	       field(LNK3, "$(DEVICE_NAME)ClkSrc-SP")
+#	       field(LNK4, "$(DEVICE_NAME)CtrlDAC:ALevel-SP")
+#	       field(LNK5, "$(DEVICE_NAME)CtrlDAC:ALevelMax-SP")
+#	       field(LNK6, "$(DEVICE_NAME)ASKick2")
+#		field(TPRO, "1")
+#	       }
+
+#record(fanout, "$(DEVICE_NAME)ASKick2") {
+#	       field(LNK1, "$(DEVICE_NAME)CtrlDAC:ALevelMin-SP")
+#	       field(LNK2, "$(DEVICE_NAME)CtrlDAC:BLevel-SP")
+#	       field(LNK3, "$(DEVICE_NAME)CtrlDAC:BLevelMax-SP")
+#	       field(LNK4, "$(DEVICE_NAME)CtrlDAC:BLevelMin-SP")
+#	       field(LNK5, "$(DEVICE_NAME)CtrlDAC:CLevel-SP")
+#	       field(LNK6, "$(DEVICE_NAME)ASKick3")
+#	       }
+
+#record(fanout, "$(DEVICE_NAME)ASKick3") {
+#	       field(LNK1, "$(DEVICE_NAME)CtrlDAC:DLevel-SP")
+#	       field(LNK2, "$(DEVICE_NAME)Fdbk:A-SP")
+#	       field(LNK3, "$(DEVICE_NAME)Fdbk:ACtrlScaleFactor-SP")
+#	       field(LNK4, "$(DEVICE_NAME)Fdbk:AIntMax-SP")
+#	       field(LNK5, "$(DEVICE_NAME)Fdbk:AKd-SP")
+#	       field(LNK6, "$(DEVICE_NAME)ASKick4")
+#	       }
+
+#record(fanout, "$(DEVICE_NAME)ASKick4") {
+#	       field(LNK1, "$(DEVICE_NAME)Fdbk:AKi-SP")
+#	       field(LNK2, "$(DEVICE_NAME)Fdbk:AKp-SP")
+#	       field(LNK3, "$(DEVICE_NAME)Fdbk:AutoDisableLevel-SP")
+#	       field(LNK4, "$(DEVICE_NAME)Fdbk:B-SP")
+#	       field(LNK5, "$(DEVICE_NAME)Fdbk:BCtrlScaleFactor-SP")
+#	       field(LNK6, "$(DEVICE_NAME)ASKick5")
+#	       }
+
+#record(fanout, "$(DEVICE_NAME)ASKick5") {
+#	       field(LNK1, "$(DEVICE_NAME)Fdbk:BKd-SP")
+#	       field(LNK2, "$(DEVICE_NAME)Fdbk:BKi-SP")
+#	       field(LNK3, "$(DEVICE_NAME)Fdbk:BKp-SP")
+#	       field(LNK4, "$(DEVICE_NAME)Fdbk:rate-SP")
+#	       field(LNK5, "$(DEVICE_NAME)Pos:Kx-SP")
+#	       field(LNK6, "$(DEVICE_NAME)ASKick6")
+#	       }
+
+#record(fanout, "$(DEVICE_NAME)ASKick6") {
+#	       field(LNK1, "$(DEVICE_NAME)Pos:Ky-SP")
+#	       field(LNK2, "$(DEVICE_NAME)Trig:Dly-SP")
+#	       field(LNK3, "$(DEVICE_NAME)Trig:EventNum-SP")
+#	       field(LNK4, "$(DEVICE_NAME)Trig:NumSamples-SP")
+#	       field(LNK5, "$(DEVICE_NAME)Fdbk:BIntMax-SP")
+#	       field(LNK6, "$(DEVICE_NAME)ASKick7")
+#	       }
+	       
+#record(fanout, "$(DEVICE_NAME)ASKick7") {
+#	       field(LNK1, "$(DEVICE_NAME)IntBias:Pol-SP")
+#	       field(LNK2, "$(DEVICE_NAME)IntBias:Level-SP")
+#	       field(LNK3, "$(DEVICE_NAME)Bias:InnerShieldConn-SP")
+#	       field(LNK4, "$(DEVICE_NAME)Fdbk:AEn-SP")
+#	       field(LNK5, "$(DEVICE_NAME)Fdbk:BEn-SP")
+#	       field(LNK6, "$(DEVICE_NAME)ASKick8")
+#	       }
+
+#record(fanout, "$(DEVICE_NAME)ASKick8") {
+#	       field(LNK1, "$(DEVICE_NAME)Fdbk:rate-SP")
+#	       field(LNK2, "$(DEVICE_NAME)Gain:Level-SP")
+#	       field(LNK3, "$(DEVICE_NAME)Fdbk:LvdsEn")
+#	       field(LNK4, "$(DEVICE_NAME)Fdbk:Reenable")
+#	       field(LNK5, "$(DEVICE_NAME)Fdbk:AutoDisableLevel-SP")
+#	       }
+

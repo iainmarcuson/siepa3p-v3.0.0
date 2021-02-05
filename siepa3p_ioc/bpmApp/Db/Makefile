@@ -24,6 +24,8 @@ include $(TOP)/configure/CONFIG
 #DB += bpm_id23_alarm_sum.db
 DB += xbpm.db
 DB += xbpm_sydor.db
+DB += as_record.db
+
 #----------------------------------------------------
 # If <anyname>.db template is not named <anyname>*.template add
 # <anyname>_template = <templatename>

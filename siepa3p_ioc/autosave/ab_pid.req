@@ -1,4 +1,7 @@
 $(DEVICE_NAME)Bias:BiasSource-SP
+$(DEVICE_NAME)IntBias:Pol-SP
+$(DEVICE_NAME)IntBias:Level-SP
+$(DEVICE_NAME)Bias:InnerShieldConn-SP
 #$(DEVICE_NAME)Bias:InnerShieldConn-SP
 #$(DEVICE_NAME)Cal:AGain-SP
 #$(DEVICE_NAME)Cal:AOffset-SP
@@ -19,6 +22,7 @@ $(DEVICE_NAME)CtrlDAC:BLevelMax-SP
 $(DEVICE_NAME)CtrlDAC:BLevelMin-SP
 $(DEVICE_NAME)CtrlDAC:CLevel-SP
 $(DEVICE_NAME)CtrlDAC:DLevel-SP
+$(DEVICE_NAME)Fdbk:AEn-SP
 $(DEVICE_NAME)Fdbk:A-SP
 $(DEVICE_NAME)Fdbk:ACtrlScaleFactor-SP
 $(DEVICE_NAME)Fdbk:AIntMax-SP
@@ -26,13 +30,14 @@ $(DEVICE_NAME)Fdbk:AKd-SP
 $(DEVICE_NAME)Fdbk:AKi-SP
 $(DEVICE_NAME)Fdbk:AKp-SP
 $(DEVICE_NAME)Fdbk:AutoDisableLevel-SP
+$(DEVICE_NAME)Fdbk:BEn-SP
 $(DEVICE_NAME)Fdbk:B-SP
 $(DEVICE_NAME)Fdbk:BCtrlScaleFactor-SP
 $(DEVICE_NAME)Fdbk:BKd-SP
 $(DEVICE_NAME)Fdbk:BKi-SP
 $(DEVICE_NAME)Fdbk:BKp-SP
 $(DEVICE_NAME)Fdbk:rate-SP
-#$(DEVICE_NAME)Gain:Level-SP
+$(DEVICE_NAME)Gain:Level-SP
 #$(DEVICE_NAME)IntBias:Level-SP
 #$(DEVICE_NAME)IntBias:Pol-SP
 $(DEVICE_NAME)Pos:Kx-SP
@@ -41,3 +46,6 @@ $(DEVICE_NAME)Trig:Dly-SP
 $(DEVICE_NAME)Trig:EventNum-SP
 $(DEVICE_NAME)Trig:NumSamples-SP
 $(DEVICE_NAME)Fdbk:BIntMax-SP
+$(DEVICE_NAME)Fdbk:LvdsEn
+$(DEVICE_NAME)Fdbk:Reenable
+$(DEVICE_NAME)Fdbk:AutoDisableLevel-SP
