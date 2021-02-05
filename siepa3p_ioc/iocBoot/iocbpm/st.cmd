@@ -11,6 +11,7 @@ psc_registerRecordDeviceDriver(pdbbase)
 
 #**Load record instances
 dbLoadRecords("../../db/xbpm_sydor.db", "DEVICE_NAME=$(DEVICE_NAME), ADC_WFM_LEN=102400, FA_WFM_LEN=131072")
+dbLoadRecords("../../db/as_record.db", "DEVICE_NAME=$(DEVICE_NAME)")
 
 #**PSC Settings
 var(PSCDebug, 2)	#5 full debug
@@ -40,8 +41,8 @@ dbpf $(DEVICE_NAME)SERIAL-I $(SERIAL_NUMBER)
 #**Load calibrations
 < Calibrations/calibration_siepa3p_sn$(SERIAL_NUMBER).txt		
 
-#**Set Gain
-dbpf $(DEVICE_NAME)Gain:Level-SP 4
+#**Don't set Gain
+#dbpf $(DEVICE_NAME)Gain:Level-SP 4
 
 #**Initialization Complete
 dbpf $(DEVICE_NAME)Leds-SP 11184496
@@ -49,8 +50,9 @@ epicsThreadSleep 1
 dbpf $(DEVICE_NAME)Leds-SP 16776216
 epicsThreadSleep 1
 dbpf $(DEVICE_NAME)Leds-SP 0
-dbpf $(DEVICE_NAME)IntBias:Pol-SP 0
+#dbpf $(DEVICE_NAME)IntBias:Pol-SP 0
 
+dbpf $(DEVICE_NAME)ASProc1.PROC 1
 #
 #******************************************************************************
 #			ELECTROMETER INITIALIZATION COMPLETE

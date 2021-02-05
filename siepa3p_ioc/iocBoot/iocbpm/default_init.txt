@@ -6,17 +6,17 @@
 
 #BIAS OUTPUT INITIAL STATE
 dbpf $(DEVICE_NAME)Bias:Conn-SP 1 		#Connected
-dbpf $(DEVICE_NAME)Bias:InnerShieldConn-SP 0 	#Grounded
-dbpf $(DEVICE_NAME)Bias:BiasSource-SP 0 	#Internal
+#dbpf $(DEVICE_NAME)Bias:InnerShieldConn-SP 0 	#Grounded
+#dbpf $(DEVICE_NAME)Bias:BiasSource-SP 0 	#Internal
 
 #CHANNEL INPUT INITIAL STATE
 dbpf $(DEVICE_NAME)Channel:BiasSource-SP 0	#Internal
 dbpf $(DEVICE_NAME)Channel:InnerShieldConn-SP 0 #Grounded
 
 #INTERNAL BIAS INITIAL STATE
-dbpf $(DEVICE_NAME)IntBias:Level-SP 0		#0V
-dbpf $(DEVICE_NAME)IntBias:Pol-SP 1		#Negative
-
+#dbpf $(DEVICE_NAME)IntBias:Level-SP 0		#0V
+#dbpf $(DEVICE_NAME)IntBias:Pol-SP 1		#Negative
+#
 #DAC Absolute Limits
 dbpf $(DEVICE_NAME)CtrlDAC:ALevelMax-SP.HOPR 10
 dbpf $(DEVICE_NAME)CtrlDAC:ALevelMax-SP.LOPR -10
@@ -45,14 +45,17 @@ dbpf $(DEVICE_NAME)Trig:NumSamples-SP.DRVH   	131072
 
 #Feedback
 #--Feedback enable (ON/OFF)
-dbpf $(DEVICE_NAME)Fdbk:AEn-SP 		0  #CHA OFF
-dbpf $(DEVICE_NAME)Fdbk:BEn-SP 		0  #CHB OFF
+#///
+#dbpf $(DEVICE_NAME)Fdbk:AEn-SP 		0  #CHA OFF
+#dbpf $(DEVICE_NAME)Fdbk:BEn-SP 		0  #CHB OFF
 
 #--Feedback auto Reenable
-dbpf $(DEVICE_NAME)Fdbk:Reenable	1  #ON
+#///
+#dbpf $(DEVICE_NAME)Fdbk:Reenable	1  #ON
 
 #--Feedback LVDS Disablng
-dbpf $(DEVICE_NAME)Fdbk:LvdsEn		1  #ON
+#///
+#dbpf $(DEVICE_NAME)Fdbk:LvdsEn		1  #ON
 
 #--Feedback sequencer
 seq fdbkseq DEVICE_NAME=$(DEVICE_NAME)
