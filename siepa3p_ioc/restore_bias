@@ -1,0 +1,6 @@
+#!/bin/bash
+
+PATH=/usr/lib/epics3/bin/linux-x86_64:$PATH
+sleep 10
+caput `cat autosave/intbias_restore.txt`
+rm autosave/inbias_restore.txt

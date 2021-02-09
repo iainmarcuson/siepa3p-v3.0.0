@@ -32,6 +32,8 @@ if [ ! -z $1 ];then
 
 	elif [ $1 = 'start' ];then
 		printf "\n**Initialize IOC\n"
+		grep IntBias:Level-SP autosave/ab_pid.sav > autosave/intbias_restore.txt
+		./restore_bias &
 		cd iocBoot/iocbpm/ 
 		./st.cmd
 	
