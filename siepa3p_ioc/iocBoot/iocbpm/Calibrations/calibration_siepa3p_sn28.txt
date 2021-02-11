@@ -66,10 +66,10 @@ dbpf $(DEVICE_NAME)CCalib_Set.DO8 9931842
 dbpf $(DEVICE_NAME)DCalib_Set.DO8 9877549 
 
 #--35mA Offsets
-dbpf $(DEVICE_NAME)ACalib_Set.DO9 -1384 
-dbpf $(DEVICE_NAME)BCalib_Set.DO9 -878 
-dbpf $(DEVICE_NAME)CCalib_Set.DO9 -1163 
-dbpf $(DEVICE_NAME)DCalib_Set.DO9 -761 
+dbpf $(DEVICE_NAME)ACalib_Set.DO9 -1255 #-1384 
+dbpf $(DEVICE_NAME)BCalib_Set.DO9 -874  #-878 
+dbpf $(DEVICE_NAME)CCalib_Set.DO9 -1159 #-1163 
+dbpf $(DEVICE_NAME)DCalib_Set.DO9 -757  #-761 
 #--35mA Gains
 dbpf $(DEVICE_NAME)ACalib_Set.DOA 404657450 
 dbpf $(DEVICE_NAME)BCalib_Set.DOA 402250513 
