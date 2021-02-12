@@ -22,7 +22,7 @@ dbpf $(DEVICE_NAME)Bias:Out-I.ESLO -0.0004598579
 
 #GAIN CALIBRATIONS 
 #--1uA Offsets
-dbpf $(DEVICE_NAME)ACalib_Set.DO1 -1184 
+dbpf $(DEVICE_NAME)ACalib_Set.DO1 -1172 
 dbpf $(DEVICE_NAME)BCalib_Set.DO1 -854 
 dbpf $(DEVICE_NAME)CCalib_Set.DO1 -1129 
 dbpf $(DEVICE_NAME)DCalib_Set.DO1 -740 
@@ -33,7 +33,7 @@ dbpf $(DEVICE_NAME)CCalib_Set.DO2 8740
 dbpf $(DEVICE_NAME)DCalib_Set.DO2 8593 
 
 #--10uA Offsets
-dbpf $(DEVICE_NAME)ACalib_Set.DO3 -1168 
+dbpf $(DEVICE_NAME)ACalib_Set.DO3 -1164 
 dbpf $(DEVICE_NAME)BCalib_Set.DO3 -848 
 dbpf $(DEVICE_NAME)CCalib_Set.DO3 -1125 
 dbpf $(DEVICE_NAME)DCalib_Set.DO3 -735 
@@ -44,7 +44,7 @@ dbpf $(DEVICE_NAME)CCalib_Set.DO4 86926
 dbpf $(DEVICE_NAME)DCalib_Set.DO4 86452 
 
 #--100uA Offsets
-dbpf $(DEVICE_NAME)ACalib_Set.DO5 -1167 
+dbpf $(DEVICE_NAME)ACalib_Set.DO5 -1163 
 dbpf $(DEVICE_NAME)BCalib_Set.DO5 -847 
 dbpf $(DEVICE_NAME)CCalib_Set.DO5 -1124 
 dbpf $(DEVICE_NAME)DCalib_Set.DO5 -734 
@@ -55,7 +55,7 @@ dbpf $(DEVICE_NAME)CCalib_Set.DO6 869304
 dbpf $(DEVICE_NAME)DCalib_Set.DO6 864429 
 
 #--1mA Offsets
-dbpf $(DEVICE_NAME)ACalib_Set.DO7 -1166 
+dbpf $(DEVICE_NAME)ACalib_Set.DO7 -1164 
 dbpf $(DEVICE_NAME)BCalib_Set.DO7 -847 
 dbpf $(DEVICE_NAME)CCalib_Set.DO7 -1124 
 dbpf $(DEVICE_NAME)DCalib_Set.DO7 -734 
@@ -66,7 +66,7 @@ dbpf $(DEVICE_NAME)CCalib_Set.DO8 9931842
 dbpf $(DEVICE_NAME)DCalib_Set.DO8 9877549 
 
 #--35mA Offsets
-dbpf $(DEVICE_NAME)ACalib_Set.DO9 -1255 #-1384 
+dbpf $(DEVICE_NAME)ACalib_Set.DO9 -1261 #-1384 
 dbpf $(DEVICE_NAME)BCalib_Set.DO9 -874  #-878 
 dbpf $(DEVICE_NAME)CCalib_Set.DO9 -1159 #-1163 
 dbpf $(DEVICE_NAME)DCalib_Set.DO9 -757  #-761 
