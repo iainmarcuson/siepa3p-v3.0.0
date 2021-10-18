@@ -102,6 +102,8 @@ record(mbbo, "$(DEVICE_NAME)ClkSrc-SP"){
 	field(ONVL, "1")
 	field(TWST, "EVR")
 	field(TWVL, "2")
+	field(VAL, "1")
+	field(PINI, "YES")
 }
 
 #POSITION-SET
